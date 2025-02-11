@@ -18,5 +18,26 @@
     6 : spread operator    : not applicable            ...
     7 : Module             : Builtin not present       import and export 
     8 : Promises           : async                     await/async
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     
 */
