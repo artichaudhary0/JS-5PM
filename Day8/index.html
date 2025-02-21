@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Form Submission (Signup)</h1>
+    <form onsubmit="">
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter your name" name="name" id="name" />
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter your email" name="email" id="email" />
+        <br>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter your password" name="password" id="password" />
+        <br>
+        <br>
+        <label for="cpassword">Confirm Password</label>
+        <input type="password" placeholder="Enter confirm password" name="cpassword" id="cpassword" />
+        <br>
+        <br>
+        <button type="submit" id="submitSignupBtn">Submit</button>
+
+    </form>
+    <h1>Form Submission (Login)</h1>
+    <form onsubmit="">
+        <label for="loginEmail">Email</label>
+        <input type="email" placeholder="Enter your email" name="email" id="loginEmail" />
+        <br>
+        <br>
+        <label for="loginPassword">Password</label>
+        <input type="password" placeholder="Enter your password" name="password" id="loginPassword" />
+        <br>
+        <br>
+        <label for="cLoginPassword">Confirm Password</label>
+        <input type="password" placeholder="Enter confirm password" name="cpassword" id="cLoginPassword" />
+        <br>
+        <br>
+        <button type="submit" id="submitLoginBtn">Submit</button>
+
+    </form>
+
+    <script>
+
+        // signup
+        let name = document.getElementById("name")
+        let email = document.getElementById("email")
+        let password = document.getElementById("password")
+        let cpassword = document.getElementById("cpassword")
+        let signUpButton = document.getElementById("submitSignupBtn")
+
+        // login 
+        let loginEmail = document.getElementById("loginEmail")
+        let loginPassword = document.getElementById("loginPassword")
+        let cLoginPassword = document.getElementById("cLoginPassword")
+        let submitLoginBtn = document.getElementById("submitLoginBtn")
+
+        signUpButton.addEventListener("click", (e) => {
+            e.preventDefault()
+            let userEmail = email.value
+            let userPassword = password.value
+            let userConfirmPassword = cpassword.value
+
+            if (userEmail && userPassword && userConfirmPassword) {
+                if (userPassword != userConfirmPassword) {
+                    alert("Password does not match")
+                } else {
+                    alert("You have successfully signed up")
+                }
+            }
+
+        })
+
+        submitLoginBtn.addEventListener('click', (e) => {
+            let changeEmail = loginEmail.value
+            let changePassword = loginPassword.value
+            let changeCPassword = cLoginPassword.value
+
+            // user exist ? 
+            if (email.value != changeEmail) {
+                alert("user does not exist")
+            } else {
+                if (changePassword == password) {
+                    alert("Current password can not be same as previous password")
+                } {
+                    if (changePassword == changeCPassword) {
+                        alert("Passowrd dows match with confirm password")
+                    } else {
+                        alert("password reset sucessfully ")
+                    }
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>

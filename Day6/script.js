@@ -34,9 +34,6 @@ non primitive
     BigInt : true
     Symbol : true
     Symbol("dik") : true
-
-
-
 */
 
 let array = [
