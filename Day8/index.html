@@ -45,13 +45,12 @@
         <br>
         <br>
         <button type="submit" id="submitLoginBtn">Submit</button>
-
     </form>
 
     <script>
 
         // signup
-        let name = document.getElementById("name")
+        let name = document.getElementById("name") // pick id from html
         let email = document.getElementById("email")
         let password = document.getElementById("password")
         let cpassword = document.getElementById("cpassword")
@@ -76,7 +75,6 @@
                     alert("You have successfully signed up")
                 }
             }
-
         })
 
         submitLoginBtn.addEventListener('click', (e) => {
@@ -91,14 +89,13 @@
                 if (changePassword == password) {
                     alert("Current password can not be same as previous password")
                 } {
-                    if (changePassword == changeCPassword) {
-                        alert("Passowrd dows match with confirm password")
+                    if (changePassword != changeCPassword) {
+                        alert("Passowrd does not match with confirm password")
                     } else {
                         alert("password reset sucessfully ")
                     }
                 }
             }
-
         })
     </script>
 </body>
