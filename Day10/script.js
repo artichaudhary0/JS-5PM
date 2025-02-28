@@ -42,28 +42,28 @@ console.log(start)
 // start = 10;
 // end = 1;
 
-// while (start >= end) {
-//   console.log(start);
-//   start--;
-// }
+// // while (start >= end) {
+// //   console.log(start);
+// //   start--;
+// // }
 
-// sum of first and last digit in a number :
-//  12345 => first 1 , last = 5
+// // sum of first and last digit in a number :
+// //  12345 => first 1 , last = 5
 
-let num = 123;
-let last = num % 10;
-let sum = 0;
-let first = 0;
-while (num > 0) {
-  first = num;
-  console.log(first);
-  num = Math.floor(num / 10); // 0.1 => 0
+// let num = 123;
+// let last = num % 10;
+// let sum = 0;
+// let first = 0;
+// while (num > 0) {
+//   first = num;
+//   console.log(first);
+//   num = Math.floor(num / 10); // 0.1 => 0
 
-  // ceil , floor
-  // ceil => 12.3 => 13 , 13.9999 => 14 , 13.000000001 => 14
-  // floor => 12.3 => 12 , 13.999999=> 13 , 13.000001 => 13
+// ceil , floor
+// ceil => 12.3 => 13 , 13.9999 => 14 , 13.000000001 => 14
+// floor => 12.3 => 12 , 13.999999=> 13 , 13.000001 => 13
 
-  /*
+/*
 
   step 1 : 
   num = 123
@@ -79,9 +79,9 @@ while (num > 0) {
 
 
 */
-}
+// }
 
-console.log(last + first);
+// console.log(last + first);
 
 /*
 Dry : 
@@ -141,3 +141,38 @@ loop 11 :
     step 2 : start<=end => 11 <=10 false
     exit
 */
+
+// reverse :
+
+let rev = 0;
+let num = 4234;
+let rem = 0;
+
+while (num > 0) {
+  rem = num % 10;
+  rev = rev * 10 + rem;
+  num = Math.floor(num / 10);
+
+  /*
+    step  1 : init
+    loop 1 : 
+        rem = num%10 => 4
+        rev = rev*10 + rem => 0+4 => 4
+        num = 423
+    loop 2 : 
+        rem = num%10 => 3
+        rev = 4*10 + rem => 40+3 => 43
+        num = 42
+    loop 3 : 
+        rem = num%10 => 2
+        rev = 430 + 2 => 432
+        num 4 
+    loop 4 : 
+        rem = 4 
+        rev = 4320 + 4 => 4324
+        num 0
+    loop 5 exit                
+  */
+}
+
+console.log(rev);
