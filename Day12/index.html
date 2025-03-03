@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // while 
+        while (5 > 4) {
+            // console
+            console.log("true")
+        } 
+
+// Bill order : 
+let totalBill = 0
+let orderCount = 0
+console.log("Welcome to the billing system\n\n")
+console.log("Enter item price and quantity. Type done to finish\n")
+
+
+while(true)
+{
+    let itemPrice , quantity;
+    go:while(true)
+    {
+        let priceInput = prompt(`Enter the price of item ${orderCount+1} (or type done to finish)`)
+        // done == DONE
+        if(priceInput.toLowerCase() === 'done')
+        {
+            break; // exit the while loop when user types "done"
+        }
+        // "sdvfsyu"
+        itemPrice = parseFloat(priceInput)
+        if(isNaN(itemPrice) || itemPrice <=0)
+        {
+            console.log("Invalid price")
+            continue go// retry getting valid input
+        }
+        
+        let quantityInput = prompt(`Enter quantity for item ${orderCount + 1} : `);
+        quantity = parseInt(quantityInput)
+        
+        if(isNaN(quantity) || quantity <=0)
+        {
+            console.log("Invalid quantity") 
+            continue go// retry getting valid input
+        }
+        break; // valid input , exit
+    }
+
+    let itemTotal = itemPrice * quantity
+    // 100 + 100
+    totalBill += itemTotal
+    orderCount++
+    
+    console.log(   `Add item ${orderCount} ${itemPrice} = ${itemTotal}` )
+    console.log("Total bill" , totalBill) 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// reverse no.
+
+let num = [1,2,3,4,5]
+
+let first = 0 
+let last = num.length-1
+
+let n = 0
+let value = 0
+
+while(first<last)
+{
+    let temp = num[first]
+    num[first] = num[last]
+    num[last] = temp
+    first++
+    last--
+}
+
+console.log(num)
+
+// while(num>0)
+// {
+//     value = value*10 + num%10
+//     num = Math.floor(num/10)
+//     /* 
+//     step 1 : let num = 12435 n = 0 , value = 0
+    
+//     loop 1 : 
+//         step 2 : num > 0 true 12435 > 0 
+//         step 3 : value = value*10 + 12435%10
+//                  value = 0 + 5 => 5
+//         step 4 : num = 1243
+    
+//     loop 2 : 
+//         step 2 : num > 0 true 1243 > 0 
+//         step 3 : value = 5*10 + 3 => 50 + 3 => 53
+//         step 4 : num = 124
+    
+//     loop 3 : 
+//         step 2 : true
+//         step 3 : value = value*10 + 4 =>  53*10 + 4 => 534
+//         step 4 : num = 12
+    
+//     loop 4 : 
+//         step 2 : true
+//         step 3 : 5340 + 2 => 5342
+//         step 4 : 1
+    
+//     loop 5 : 
+//         step 2 : true
+//         step 3 : 53420 + 1 => 53421
+//         step 4 : num = 0 
+        
+//     loop 6 : 
+//         step 2 : false
+//         exit
+//     */
+// }
+// console.log(value) // 50 
+
+    </script>
+
+</body>
+
+</html>
+
+
+
