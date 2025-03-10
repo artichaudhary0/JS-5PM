@@ -18,7 +18,7 @@
     6 : spread operator    : not applicable            ...
     7 : Module             : Builtin not present       import and export 
     8 : Promises           : async                     await/async
-    9 : Hoisting           :  var allow hoisting       let var not allow hoisting
+    9 : Hoisting           :  var allow hoisting       let const not allow hoisting
 
 
 
